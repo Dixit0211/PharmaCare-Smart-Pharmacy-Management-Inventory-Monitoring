@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+    <linearGradient id="capsuleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#E11D48" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Shield Base Background -->
+  <path d="M100,15 L165,42 C165,115 130,165 100,185 C70,165 35,115 35,42 Z" 
+        fill="url(#shieldGrad)" 
+        filter="url(#dropShadow)" />
+
+  <!-- Shield Inner Border Accent -->
+  <path d="M100,23 L157,47 C157,110 126,155 100,173 C74,155 43,110 43,47 Z" 
+        fill="none" 
+        stroke="url(#tealGrad)" 
+        stroke-width="3" 
+        opacity="0.8" />
+
+  <!-- Medical Cross Background Disc -->
+  <circle cx="100" cy="95" r="48" fill="#FFFFFF" opacity="0.08" />
+
+  <!-- Medical Cross -->
+  <g fill="url(#tealGrad)">
+    <rect x="88" y="58" width="24" height="74" rx="6" />
+    <rect x="63" y="83" width="74" height="24" rx="6" />
+  </g>
+
+  <!-- Floating Diagonal Capsule -->
+  <g transform="rotate(-45 100 95)">
+    <!-- Capsule Left Half (Teal) -->
+    <path d="M78,85 L98,85 L98,105 L78,105 A10,10 0 0,1 78,85 Z" fill="#0D9488" stroke="#FFFFFF" stroke-width="2" />
+    <!-- Capsule Right Half (Rose/White) -->
+    <path d="M98,85 L118,85 A10,10 0 0,1 118,105 L98,105 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="98" y1="85" x2="98" y2="105" stroke="#0F172A" stroke-width="1.5" />
+  </g>
+
+  <!-- Sparkle/Plus Accent -->
+  <path d="M142,50 L146,50 L146,46 L148,46 L148,50 L152,50 L152,52 L148,52 L148,56 L146,56 L146,52 L142,52 Z" fill="#2DD4BF" />
+</svg>
