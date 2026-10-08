@@ -1,0 +1,1 @@
+# PharmaCare-Smart-Pharmacy-Management-Inventory-Monitoring
