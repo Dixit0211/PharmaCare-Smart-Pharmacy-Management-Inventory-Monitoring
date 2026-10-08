@@ -49,11 +49,11 @@ def render_login_page() -> None:
         st.markdown(
             f"""
             <div style="text-align: center; margin-bottom: 1.5rem;">
-                <div style="display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; background: #0F172A; border-radius: 16px; margin-bottom: 0.75rem; box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);">
-                    <span style="font-size: 2.25rem;">💊</span>
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 76px; height: 76px; background: linear-gradient(135deg, #0F766E 0%, #115E59 100%); border-radius: 20px; margin-bottom: 0.85rem; box-shadow: 0 8px 24px rgba(15, 118, 110, 0.25);">
+                    <span style="font-size: 2.5rem;">💊</span>
                 </div>
-                <h1 style="color: #0F172A; margin: 0; font-size: 1.85rem; font-weight: 700;">PharmaCare</h1>
-                <p style="color: #64748B; font-size: 0.95rem; margin-top: 0.25rem;">Smart Pharmacy Management & Inventory Monitoring</p>
+                <h1 style="color: #1C1917; margin: 0; font-size: 2rem; font-weight: 800; letter-spacing: -0.03em;">PharmaCare</h1>
+                <p style="color: #78716C; font-size: 0.98rem; margin-top: 0.35rem; font-weight: 500;">Smart Pharmacy Management & Inventory Monitoring</p>
             </div>
             """,
             unsafe_allow_html=True,

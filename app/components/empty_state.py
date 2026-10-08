@@ -17,13 +17,14 @@ def render_empty_state(
             text-align: center;
             padding: 3rem 1.5rem;
             background: #FFFFFF;
-            border: 2px dashed #CBD5E1;
-            border-radius: 12px;
+            border: 2px dashed #D6CEC0;
+            border-radius: 14px;
             margin: 1.5rem 0;
+            box-shadow: 0 4px 16px rgba(120, 100, 80, 0.03);
         ">
-            <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">{icon}</div>
-            <h4 style="color: #1E293B; margin-bottom: 0.25rem; font-weight: 600;">{title}</h4>
-            <p style="color: #64748B; font-size: 0.9rem; max-width: 400px; margin: 0 auto 1rem auto;">{message}</p>
+            <div style="font-size: 2.75rem; margin-bottom: 0.75rem;">{icon}</div>
+            <h4 style="color: #1C1917; margin-bottom: 0.35rem; font-weight: 700;">{title}</h4>
+            <p style="color: #78716C; font-size: 0.92rem; max-width: 420px; margin: 0 auto 1rem auto; font-weight: 500;">{message}</p>
         </div>
         """,
         unsafe_allow_html=True,

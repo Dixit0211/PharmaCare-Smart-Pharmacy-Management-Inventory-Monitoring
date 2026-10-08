@@ -22,9 +22,9 @@ def render_sidebar(unread_notifications_count: int = 0) -> None:
 
         st.markdown(
             """
-            <div style="margin-bottom: 1rem;">
-                <h3 style="color: #F8FAFC; margin: 0; font-size: 1.25rem; font-weight: 700;">PharmaCare</h3>
-                <span style="color: #94A3B8; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">Smart Pharmacy Management</span>
+            <div style="margin-bottom: 1.25rem; padding: 0.25rem 0;">
+                <h3 style="color: #1C1917; margin: 0; font-size: 1.35rem; font-weight: 800; letter-spacing: -0.02em;">💊 PharmaCare</h3>
+                <span style="color: #78716C; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600;">Smart Pharmacy Management</span>
             </div>
             """,
             unsafe_allow_html=True,
@@ -36,8 +36,8 @@ def render_sidebar(unread_notifications_count: int = 0) -> None:
 
         profile_html = f"""
         <div class="user-profile-chip">
-            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
-                <div style="width: 32px; height: 32px; border-radius: 50%; background: #0D9488; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem;">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #0F766E 0%, #115E59 100%); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; box-shadow: 0 2px 6px rgba(15, 118, 110, 0.25);">
                     {user.get("username", "U")[:1].upper()}
                 </div>
                 <div>

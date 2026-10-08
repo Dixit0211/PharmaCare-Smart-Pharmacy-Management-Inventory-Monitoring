@@ -169,8 +169,8 @@ with col_main_chart:
                 x=timeline_df["day_name"],
                 y=timeline_df["revenue"],
                 name="Revenue (₹)",
-                marker_color="#0D9488",
-                opacity=0.85,
+                marker_color="#0F766E",
+                opacity=0.9,
                 hovertemplate="<b>%{x}</b><br>Revenue: ₹%{y:,.2f}<extra></extra>",
             )
         )
@@ -183,8 +183,8 @@ with col_main_chart:
                 name="Orders Completed",
                 yaxis="y2",
                 mode="lines+markers",
-                line=dict(color="#0F172A", width=2.5),
-                marker=dict(size=6, color="#0F172A"),
+                line=dict(color="#D97706", width=2.5),
+                marker=dict(size=6, color="#D97706"),
                 hovertemplate="<b>%{x}</b><br>Orders: %{y}<extra></extra>",
             )
         )
@@ -194,22 +194,22 @@ with col_main_chart:
             height=340,
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Plus Jakarta Sans", color="#1C1917"),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
             xaxis=dict(
                 showgrid=False,
                 tickangle=-35 if selected_days > 7 else 0,
+                tickfont=dict(color="#78716C"),
             ),
             yaxis=dict(
-                title="Revenue (₹)",
-                titlefont=dict(color="#0D9488"),
-                tickfont=dict(color="#0D9488"),
+                title=dict(text="Revenue (₹)", font=dict(color="#0F766E", size=12)),
+                tickfont=dict(color="#0F766E"),
                 showgrid=True,
-                gridcolor="#E2E8F0",
+                gridcolor="#EBE5DC",
             ),
             yaxis2=dict(
-                title="Orders",
-                titlefont=dict(color="#0F172A"),
-                tickfont=dict(color="#0F172A"),
+                title=dict(text="Orders", font=dict(color="#D97706", size=12)),
+                tickfont=dict(color="#D97706"),
                 overlaying="y",
                 side="right",
                 showgrid=False,
@@ -230,7 +230,7 @@ with col_side_chart:
             values="total_stock",
             names="category",
             hole=0.45,
-            color_discrete_sequence=px.colors.qualitative.Prism,
+            color_discrete_sequence=["#0F766E", "#D97706", "#2563EB", "#059669", "#8B5CF6", "#E11D48"],
         )
         fig_cat.update_traces(
             textposition="inside",
@@ -242,6 +242,7 @@ with col_side_chart:
             height=340,
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Plus Jakarta Sans", color="#1C1917"),
             showlegend=False,
         )
         st.plotly_chart(fig_cat, use_container_width=True)
